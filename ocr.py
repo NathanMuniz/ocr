@@ -61,6 +61,7 @@ def classify_and_extract_data(file_path: str):
         ]
     )
 
+
     response = llm.invoke([message])
     response_text = response.content
     parsed_data = extract_json_from_response(response_text)

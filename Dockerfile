@@ -18,5 +18,7 @@ RUN uv lock && uv venv .venv && uv sync
 # Copia o código da aplicação para dentro do container
 COPY . .
 
+RUN uv sync
+
 # Comando para iniciar a aplicação (exemplo com uvicorn)
 CMD ["uv", "run", "streamlit", "run", "ocr.py", "--server.port=8501", "--server.address=0.0.0.0"]

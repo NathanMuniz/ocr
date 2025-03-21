@@ -60,6 +60,7 @@ def classify_and_extract_data(file_path: str):
             },
         ]
     )
+    
 
     response = llm.invoke([message])
     response_text = response.content

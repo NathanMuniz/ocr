@@ -66,7 +66,7 @@ def classify_and_extract_data(file_path: str):
     response_text = response.content
     parsed_data = extract_json_from_response(response_text)
 
-    return json.dump(parsed_data, f, indent=4, ensure_ascii=False)
+    return parsed_data
 
 
 st.title("Document Classification and Data Extraction")

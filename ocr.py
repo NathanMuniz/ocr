@@ -68,7 +68,7 @@ def classify_and_extract_data(file_path: str):
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    with open(f"./extracted_datas/extracted_data_{timestamp}.json", "w", encoding="utf-8") as f:
+    with open(f"./extracted_datas/extracted_data_s.json", "w", encoding="utf-8") as f:
         json.dump(parsed_data, f, indent=4, ensure_ascii=False)
 
     return parsed_data

@@ -66,12 +66,8 @@ def classify_and_extract_data(file_path: str):
     response_text = response.content
     parsed_data = extract_json_from_response(response_text)
 
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    return json.dump(parsed_data, f, indent=4, ensure_ascii=False)
 
-    with open(f"./extracted_datas/extracted_data_s.json", "w", encoding="utf-8") as f:
-        json.dump(parsed_data, f, indent=4, ensure_ascii=False)
-
-    return parsed_data
 
 st.title("Document Classification and Data Extraction")
 

@@ -69,9 +69,9 @@ def classify_and_extract_data(file_path: str):
     return parsed_data
 
 
-st.title("Document Classification and Data Extraction")
+st.title("Classificação e Extração de Dados.")
 
-uploaded_file = st.file_uploader("Upload a document (PNG, JPG, PDF)", type=["png", "jpg", "jpeg", "pdf"])
+uploaded_file = st.file_uploader("Faça o Upload (PNG, JPG, PDF)", type=["png", "jpg", "jpeg", "pdf"])
 
 if uploaded_file is not None:
     file_path = f"./uploaded_docs/{uploaded_file.name}"
